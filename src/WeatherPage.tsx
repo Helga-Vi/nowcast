@@ -9,7 +9,9 @@ export default function WeatherPage() {
       );
 
       const data = await res.json();
-      console.log("WEATHER DATA:", data);
+      const timeseries = data.properties.timeseries;
+
+      console.log("FIRST ELEMENT:", timeseries[0]);
     }
 
     fetchWeather();
